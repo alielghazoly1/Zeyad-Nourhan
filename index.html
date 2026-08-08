@@ -861,8 +861,8 @@
 
                     #rec2442650993 .tn-elem[data-elem-id="1776948546583"] .tn-atom {
                         border-radius: 0px 0px 0px 0px;
-                        opacity: 0.1;
-                        background-color: #fffdfb;
+                        opacity: 1;
+                        background: linear-gradient(to bottom, rgba(10,8,6,0) 0%, rgba(10,8,6,0.15) 18%, rgba(10,8,6,0.5) 27%, rgba(10,8,6,0.58) 42%, rgba(10,8,6,0.45) 50%, rgba(10,8,6,0.1) 60%, rgba(10,8,6,0) 72%);
                         background-position: center center;
                         border-width: var(--t396-borderwidth,0);
                         border-style: var(--t396-borderstyle,solid);
@@ -995,7 +995,7 @@
                     }
 
                     #rec2442650993 .tn-elem[data-elem-id="1730310670432"] {
-                        color: #4a4a4a;
+                        color: #fffdfb;
                         text-align: CENTER;
                         z-index: 3;
                         top: 308px;
@@ -1006,7 +1006,8 @@
 
                     #rec2442650993 .tn-elem[data-elem-id="1730310670432"] .tn-atom {
                         vertical-align: middle;
-                        color: #4a4a4a;
+                        color: #fffdfb;
+                        text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.7), 0 0 24px rgba(0,0,0,0.5);
                         font-size: 22px;
                         font-family: var(--t-text-font,Arial);
                         line-height: 1.15;
@@ -1083,7 +1084,7 @@
                     }
 
                     #rec2442650993 .tn-elem[data-elem-id="1776948176126"] {
-                        color: #4a4a4a;
+                        color: #fffdfb;
                         text-align: center;
                         z-index: 3;
                         top: 250px;
@@ -1094,7 +1095,8 @@
 
                     #rec2442650993 .tn-elem[data-elem-id="1776948176126"] .tn-atom {
                         vertical-align: middle;
-                        color: #4a4a4a;
+                        color: #fffdfb;
+                        text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5);
                         font-size: 45px;
                         font-family: 'NewFonts',Arial,sans-serif;
                         line-height: 1.55;
@@ -1556,54 +1558,74 @@
                                             flex-direction: column;
                                             align-items: center;
                                             width: 100%;
-                                            padding: 26px 16px 20px;
+                                            max-width: 320px;
+                                            margin: 0 auto;
+                                            padding: 22px 6px 16px;
+                                            overflow-x: hidden;
                                         }
                                         #wc-root .wc-row {
                                             display: flex;
                                             justify-content: center;
-                                            gap: 18px;
+                                            align-items: flex-start;
+                                            gap: 6px;
                                             flex-wrap: nowrap;
+                                            width: 100%;
+                                            max-width: 300px;
+                                            margin: 0 auto;
                                         }
                                         #wc-root .wc-unit {
                                             display: flex;
                                             flex-direction: column;
                                             align-items: center;
-                                            min-width: 64px;
+                                            flex: 1 1 0;
+                                            max-width: 44px;
+                                            min-width: 0;
                                         }
                                         #wc-root .wc-num {
                                             font-family: 'Georgia', serif;
-                                            font-size: 34px;
+                                            font-size: 16px;
                                             font-weight: 700;
                                             color: #4a4a4a;
                                             line-height: 1;
                                             background: #fbf7f0;
                                             border: 1px solid #e7dcc9;
-                                            border-radius: 10px;
-                                            width: 64px;
-                                            height: 64px;
+                                            border-radius: 7px;
+                                            width: 100%;
+                                            aspect-ratio: 1 / 1;
+                                            max-width: 42px;
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
                                         }
                                         #wc-root .wc-label {
-                                            margin-top: 12px;
-                                            font-size: 11px;
-                                            letter-spacing: 1.5px;
+                                            margin-top: 6px;
+                                            font-size: 7.5px;
+                                            letter-spacing: 0.3px;
                                             text-transform: uppercase;
                                             color: #a08f6f;
+                                            white-space: nowrap;
                                         }
                                         #wc-root .wc-sep {
-                                            font-size: 28px;
+                                            font-size: 14px;
                                             color: #c9b98f;
-                                            align-self: flex-start;
-                                            margin-top: 16px;
+                                            margin-top: 8px;
+                                            flex: 0 0 auto;
                                         }
                                         #wc-root .wc-date {
-                                            margin-top: 28px;
-                                            font-size: 15px;
-                                            letter-spacing: 1px;
+                                            margin-top: 18px;
+                                            font-size: 12px;
+                                            letter-spacing: 0.5px;
                                             color: #4a4a4a;
                                             text-align: center;
+                                        }
+                                        @media screen and (min-width: 600px) {
+                                            #wc-root { max-width: 460px; }
+                                            #wc-root .wc-row { max-width: 460px; gap: 10px; }
+                                            #wc-root .wc-unit { max-width: 60px; }
+                                            #wc-root .wc-num { font-size: 28px; max-width: 60px; border-radius: 10px; }
+                                            #wc-root .wc-label { font-size: 11px; letter-spacing: 1px; margin-top: 8px; }
+                                            #wc-root .wc-sep { font-size: 24px; margin-top: 12px; }
+                                            #wc-root .wc-date { font-size: 15px; margin-top: 22px; }
                                         }
                                     </style>
                                     <div class="wc-row">
